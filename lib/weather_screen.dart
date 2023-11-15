@@ -61,7 +61,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
+
                   SizedBox(height: 20),
+
                   TextField(
                     onChanged: (value) {
                       city = value;
@@ -73,17 +75,28 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     },
                     decoration: InputDecoration(
                       labelText: 'Enter City',
+                      labelStyle: TextStyle(color: Colors.black),
                       border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.orange),
+                      ),
                     ),
+                    cursorColor: Colors.orange, // Set the cursor color to orange
                   ),
+
+
 
 
                   SizedBox(height: 20),
 
                   Text('Today\'s Weather', style: TextStyle(fontSize: 50, fontWeight: FontWeight.bold),),
-                  Divider(thickness: 5, color: Colors.red),
+                  Divider(thickness: 5, color: Colors.orange),
+
+                  SizedBox(height: 20),
 
                   Image(image: AssetImage(weatherImage)),
+
+                  SizedBox(height: 20),
                   Text('Current Temperature: $temperature °C', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                   Text('Weather Status: $description', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),
                   Text('City: $city', style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),),

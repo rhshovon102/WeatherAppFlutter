@@ -27,7 +27,7 @@ class _homeState extends State<home> {
 
                 Expanded(
                   child: Container(
-                    child: Text("WELCOME",style: TextStyle(fontSize: 50,fontWeight: FontWeight.bold)),
+                    child: Text("WELCOME",style: TextStyle(fontSize: 60,fontWeight: FontWeight.bold,color: Colors.orange)),
                   ),
                 ),
 
@@ -39,7 +39,7 @@ class _homeState extends State<home> {
                     Expanded(
                         child: ElevatedButton(
                             style: ButtonStyle(
-                                backgroundColor: MaterialStatePropertyAll<Color>(Colors.orange)
+                                backgroundColor: MaterialStatePropertyAll<Color>(CupertinoColors.systemGrey5)
                             ),
                             onPressed: (){
                               Navigator.push(
@@ -47,7 +47,7 @@ class _homeState extends State<home> {
                                   MaterialPageRoute(builder: (context) => WeatherScreen())
                               );
                             },
-                            child: Text("KickOff",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold)))
+                            child: Text("KickOff",style: TextStyle(fontSize: 40,fontWeight: FontWeight.bold,color: Colors.orange)))
                     )
                   ],
                 ),
